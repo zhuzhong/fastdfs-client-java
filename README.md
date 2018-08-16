@@ -8,13 +8,16 @@ FastDFS Java Client API may be copied only under the terms of the BSD license.
 
 为了更好的与spring集成，增加FastdfsService。
 
-使用方式配置该bean,然后就可以直接使用了
+使用方式在spring的xml中配置该bean,然后就可以直接使用了
 	
 		<bean id="fastdfsService" class="c.z.DefaultFastdfsServiceImpl" init-method="init">
 			<properties name="props" ref="props" />	
 		</bean>
+或者
 
-
+		<bean id="fastdfs1Service" class="c.z.DefaultFastdfs1ServiceImpl" init-method="init">
+			<properties name="props" ref="props" />	
+		</bean>
 ## 使用ant从源码构建
 
 ```
