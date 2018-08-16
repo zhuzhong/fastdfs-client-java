@@ -9,7 +9,6 @@
 package org.csource.fastdfs;
 
 import org.csource.common.NameValuePair;
-import org.csource.fastdfs.*;
 
 /**
  * client test
@@ -48,7 +47,7 @@ public class Test {
       TrackerClient tracker = new TrackerClient();
       TrackerServer trackerServer = tracker.getConnection();
       StorageServer storageServer = null;
-      StorageClient1 client = new StorageClient1(trackerServer, storageServer);
+      StorageClient1 client = new StorageClient1(trackerServer, tracker);
 
       NameValuePair[] metaList = new NameValuePair[1];
       metaList[0] = new NameValuePair("fileName", local_filename);

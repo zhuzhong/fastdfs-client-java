@@ -40,10 +40,13 @@ public class TrackerGroup {
    * @return connected tracker server, null for fail
    */
   public TrackerServer getConnection(int serverIndex) throws IOException {
-    Socket sock = new Socket();
+    /*Socket sock = new Socket();
     sock.setReuseAddress(true);
     sock.setSoTimeout(ClientGlobal.g_network_timeout);
-    sock.connect(this.tracker_servers[serverIndex], ClientGlobal.g_connect_timeout);
+    sock.connect(this.tracker_servers[serverIndex], ClientGlobal.g_connect_timeout);*/
+      //重复的代码进行合并
+    Socket sock=ClientGlobal.getSocket(this.tracker_servers[serverIndex]);
+    sock.setReuseAddress(true);
     return new TrackerServer(sock, this.tracker_servers[serverIndex]);
   }
 

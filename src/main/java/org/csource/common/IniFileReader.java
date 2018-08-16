@@ -19,7 +19,7 @@ import java.util.Hashtable;
  * @version Version 1.0
  */
 public class IniFileReader {
-  private Hashtable paramTable;
+  private Hashtable<String,Object> paramTable;
   private String conf_filename;
 
   /**
@@ -163,7 +163,7 @@ public class IniFileReader {
   }
 
   private void readToParamTable(InputStream in) throws IOException {
-    this.paramTable = new Hashtable();
+    this.paramTable = new Hashtable<>();
     if (in == null) return;
     String line;
     String[] parts;

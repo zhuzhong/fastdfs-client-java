@@ -26,7 +26,7 @@ public class Test1 {
         System.out.println("getStoreStorage return null");
       }
 
-      StorageClient1 sc1 = new StorageClient1(ts, ss);
+      StorageClient1 sc1 = new StorageClient1(ts, tc);
 
       NameValuePair[] meta_list = null;  //new NameValuePair[0];
       String item;

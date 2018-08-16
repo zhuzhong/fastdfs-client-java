@@ -8,11 +8,10 @@
 
 package org.csource.fastdfs;
 
-import org.csource.common.NameValuePair;
-import org.csource.fastdfs.*;
-
 import java.io.File;
 import java.net.InetSocketAddress;
+
+import org.csource.common.NameValuePair;
 
 /**
  * client test
@@ -64,7 +63,7 @@ public class TestAppender1 {
   		}
   		*/
 
-      StorageClient1 client = new StorageClient1(trackerServer, storageServer);
+      StorageClient1 client = new StorageClient1(trackerServer, tracker);
       byte[] file_buff;
       NameValuePair[] meta_list;
       String group_name;
